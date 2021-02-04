@@ -13,8 +13,8 @@ female(eve).
 female(lisa).
 female(anne).
 female(carol).
-mother(X):-parent(X,Y),female(X).
-father(X):-parent(X,Y),male(X).
+mother(X,Y):-parent(X,Y),female(X).
+father(X,Y):-parent(X,Y),male(X).
 grandparent(X,Y):-parent(X,Z),parent(Z,Y).
 grandmother(X,Y):-grandparent(X,Y),female(X).
 grandfather(X,Y):-grandparent(X,Y),male(X).
